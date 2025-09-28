@@ -1,32 +1,67 @@
+/*Tailwind v4 import*/
 @import "tailwindcss";
 
+/*Fonts you can keep it here*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+/*Base resets*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
-    font-family: Inter;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+/*Design Tokens*/
+@theme {
+    /*Colors*/
+    --color-green-50: #30AF5B;
+    --color-green-90: #292C27;
+
+    --color-gray-10: #EEEEEE;
+    --color-gray-20: #A2A2A2;
+    --color-gray-30: #7B7B7B;
+    --color-gray-50: #585858;
+    --color-gray-90: #141414;
+
+    --color-orange-50: #FF814C;
+    --color-blue-70: #021639;
+    --color-yellow-50: #FEC601;
+
+    /*Breakpoints*/
+    --breakpont-xs: 400px;
+    --breakpont-3xl: 1680px;
+    --breakpont-4xl: 2200px;
+
+    /*Radii*/
+    --radius-5xl: 40px;
+
+    /*Background images*/
+    --bg-img-1: url('/img-1.png');
+    --bg-img-2: url('/img-2.png');
+    --feature-bg: url('/feature-bg.png');
+    --pattern: url('/pattern.png');
+    --pattern-2: url('/pattern-bg.png');
+
 }
 
 @layer utilities {
     .btn_white {
-        @apply  border-white bg-white px-8 py-3 text-green-50
+        @apply  border-white bg-white px-8 py-3 text-green-50;
     }
     .btn_white_text  {
-        @apply  border-white bg-white px-8 py-3 text-gray-90
+        @apply  border-white bg-white px-8 py-3 text-gray-90;
     }
     .btn_green  {
-        @apply  border-green-50 bg-green-50 px-8 py-5 text-white
+        @apply  border-green-50 bg-green-50 px-8 py-5 text-white;
     }
     .btn_dark_green {
-        @apply  bg-green-90 px-8 py-4 text-white transition-all hover:bg-black
+        @apply  bg-green-90 px-8 py-4 text-white transition-all hover:bg-black;
     }
     .btn_dark_green_outline  {
-        @apply border-gray-20 bg-green-90 px-8 py-5 text-white
+        @apply border-gray-20 bg-green-90 px-8 py-5 text-white;
     }
 
     .max-container {
@@ -153,3 +188,4 @@ body {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
+
